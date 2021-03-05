@@ -13,10 +13,10 @@ namespace MotionPicturesAPI.DAO
         //Http Get
         MotionPicture GetMotionPictureByID(int id);
         //Http Post
-        MotionPicture PostMotionPicture(MotionPicture newPicture);
+        int PostMotionPicture(MotionPicture newPicture);
         //Http Put
-        int EditMotionPicture(MotionPicture editedMotionPicture);
+        bool EditMotionPicture(MotionPicture editedMotionPicture);
         //Http Delete
-        int DeleteMotionPicture(int id);
+        bool DeleteMotionPicture(int id);
     }
 }

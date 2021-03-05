@@ -11,7 +11,7 @@ namespace MotionPicturesAPI.DAO
     {
         private string ConnectionString = "Server=.\\SQLEXPRESS;Database=MotionPictures;Trusted_Connection=True;";
 
-        public int DeleteMotionPicture(int id)
+        public bool DeleteMotionPicture(int id)
         {
             try
             {
@@ -24,7 +24,7 @@ namespace MotionPicturesAPI.DAO
             }
         }
 
-        public int EditMotionPicture(MotionPicture editedMotionPicture)
+        public bool EditMotionPicture(MotionPicture editedMotionPicture)
         {
             int rowsAffected = 0;
             try
@@ -46,7 +46,7 @@ namespace MotionPicturesAPI.DAO
 
                 throw e;
             }
-
+            return rowsAffected > 0;
         }
 
         public List<MotionPicture> GetAllMotionPictures()
@@ -103,7 +103,7 @@ namespace MotionPicturesAPI.DAO
             return motionPicture;
         }
 
-        public MotionPicture PostMotionPicture(MotionPicture newPicture)
+        public int PostMotionPicture(MotionPicture newPicture)
         {
             try
             {
@@ -123,7 +123,7 @@ namespace MotionPicturesAPI.DAO
                 throw e;
             }
 
-            return newPicture;
+            return newPicture.ID;
         }
 
         private MotionPicture GetMotionPictureFromReader(SqlDataReader reader)

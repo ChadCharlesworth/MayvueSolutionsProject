@@ -13,7 +13,7 @@ namespace MotionPicturesAPI.Controllers
     [ApiController]
     public class MotionPictureController : ControllerBase
     {
-        private IMotionPictureDAO motionPictureDAO;
+        private MotionPictureSQLDAO motionPictureDAO = new MotionPictureSQLDAO();
 
         [HttpGet]
         public ActionResult<List<MotionPicture>> ListPictures()
@@ -110,6 +110,8 @@ namespace MotionPicturesAPI.Controllers
 
                 throw;
             }
+
+            return NoContent();
         }
 }
 }

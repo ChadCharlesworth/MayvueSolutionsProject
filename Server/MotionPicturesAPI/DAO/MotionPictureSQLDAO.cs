@@ -9,19 +9,27 @@ namespace MotionPicturesAPI.DAO
 {
     public class MotionPictureSQLDAO : IMotionPictureDAO
     {
-        private string ConnectionString = "Server=.\\SQLEXPRESS;Database=MotionPictures;Trusted_Connection=True;";
+        private string ConnectionString = "Server=.\\SQLEXPRESS;Database=Master;Trusted_Connection=True;";
 
         public bool DeleteMotionPicture(int id)
         {
+            bool wasDeleted = false;
             try
             {
-
+                using(SqlConnection conn = new SqlConnection(ConnectionString))
+                {
+                    conn.Open();
+                    SqlCommand command = new SqlCommand("delete from MotionPictures where ID = @id");
+                    command.Parameters.AddWithValue("@id", id);
+                    wasDeleted = command.ExecuteNonQuery() > 0;
+                }
             }
-            catch (Exception)
+            catch (Exception e)
             {
 
-                throw;
+                throw e;
             }
+            return wasDeleted;
         }
 
         public bool EditMotionPicture(MotionPicture editedMotionPicture)
@@ -32,7 +40,7 @@ namespace MotionPicturesAPI.DAO
                 using(SqlConnection conn = new SqlConnection(ConnectionString))
                 {
                     conn.Open();
-                    SqlCommand command = new SqlCommand("update MotionPictures set Name = @name, Description = @description, Release_Year = @releaseYear where ID = @id;");
+                    SqlCommand command = new SqlCommand("update MotionPictures set Name = @name, Description = @description, Release_Year = @releaseYear where ID = @id;", conn);
                     command.Parameters.AddWithValue("@name", editedMotionPicture.Name);
                     command.Parameters.AddWithValue("@description", editedMotionPicture.Description);
                     command.Parameters.AddWithValue("@releaseYear", editedMotionPicture.ReleaseYear);

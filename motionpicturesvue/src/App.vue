@@ -1,17 +1,42 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container-fluid" id="app">
+    <button @click="showForm = !showForm" type="button" class="btn btn-primary">Add</button>
+    <picture-table v-show="!showForm" />
+    <picture-form v-show="showForm"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import PictureTable from './components/Table.vue'
+import PictureForm from './components/Form.vue'
+import MotionPictureService from './service/MotionPictureService.js'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    PictureTable,
+    PictureForm
+  },
+  created() {
+    MotionPictureService.listPictures()
+    .then(response => {
+      if(response.status == 200) {
+        response.data.forEach(picture => {
+          this.$store.commit('LOAD_PICTURES', picture);
+        })
+      }
+    })
+  },
+  data() {
+    return {
+      showForm: false
+    }
+  },
+  props: {
+    showForm: {
+      type: Boolean,
+      default: false
+    }
   }
 }
 </script>

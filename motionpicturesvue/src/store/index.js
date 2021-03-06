@@ -5,8 +5,13 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    motionPictures: []
   },
   mutations: {
+    LOAD_PICTURES(state, motionPicture) {
+      state.motionPictures.push(motionPicture);
+    },
+    
   },
   actions: {
   },

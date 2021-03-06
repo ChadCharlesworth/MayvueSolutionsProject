@@ -18,3 +18,11 @@ D:\Chadw\Documents\DeveloperThings\Side Projects\MayvueProject\MayvueSolutionsPr
 D:\Chadw\Documents\DeveloperThings\Side Projects\MayvueProject\MayvueSolutionsProject\Server\MotionPicturesAPI\obj\Debug\netcoreapp3.1\MotionPicturesAPI.pdb
 D:\Chadw\Documents\DeveloperThings\Side Projects\MayvueProject\MayvueSolutionsProject\Server\MotionPicturesAPI\obj\Debug\netcoreapp3.1\MotionPicturesAPI.genruntimeconfig.cache
 D:\Chadw\Documents\DeveloperThings\Side Projects\MayvueProject\MayvueSolutionsProject\Server\MotionPicturesAPI\obj\Debug\netcoreapp3.1\MotionPicturesAPI.csproj.CopyComplete
+D:\Chadw\Documents\DeveloperThings\Side Projects\MayvueProject\MayvueSolutionsProject\Server\MotionPicturesAPI\obj\Debug\netcoreapp3.1\MotionPicturesAPI.csproj.CoreCompileInputs.cache
+D:\Chadw\Documents\DeveloperThings\Side Projects\MayvueProject\MayvueSolutionsProject\Server\MotionPicturesAPI\obj\Debug\netcoreapp3.1\MotionPicturesAPI.MvcApplicationPartsAssemblyInfo.cache
+D:\Chadw\Documents\DeveloperThings\Side Projects\MayvueProject\MayvueSolutionsProject\Server\MotionPicturesAPI\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+D:\Chadw\Documents\DeveloperThings\Side Projects\MayvueProject\MayvueSolutionsProject\Server\MotionPicturesAPI\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+D:\Chadw\Documents\DeveloperThings\Side Projects\MayvueProject\MayvueSolutionsProject\Server\MotionPicturesAPI\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+D:\Chadw\Documents\DeveloperThings\Side Projects\MayvueProject\MayvueSolutionsProject\Server\MotionPicturesAPI\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+D:\Chadw\Documents\DeveloperThings\Side Projects\MayvueProject\MayvueSolutionsProject\Server\MotionPicturesAPI\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Chadw\Documents\DeveloperThings\Side Projects\MayvueProject\MayvueSolutionsProject\Server\MotionPicturesAPI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
